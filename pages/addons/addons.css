@@ -1,0 +1,65 @@
+/* addons.css */
+
+#addons-container {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+#addons-container button {
+	border: 2px solid #828282;
+	border-radius: 10px;
+	padding: 10px;
+	color: #fff;
+	background-color: #3b3b3b;
+	width: 100%;
+	height: 100%;
+	max-height: 100%;
+	margin-top: 1em;
+	transition: background-color 0.3s ease;
+}
+
+#addons-container button:hover {
+	background-color: #5e5e5e;
+}
+
+.addon-item {
+	border: 2px solid #484848;
+	border-radius: 10px;
+	padding: 10px;
+	margin-bottom: 10px;
+	background-color: #131313;
+	width: 8rem;
+	max-width: 8rem;
+	height: 12rem;
+	max-height: 12rem;
+	margin-left: 1rem;
+	margin-top: 2rem;
+	text-align: center;
+	transition: background-color 0.3s ease; /* Smooth transition for background change */
+}
+
+.addon-item:hover {
+	background-color: #080808; /* Lighten background on hover */
+	border: 2px solid #2a2a2a;
+}
+
+a {
+	color: #fff;
+}
+
+.addon-item h2 {
+	font-size: 18px;
+	margin-bottom: 5px;
+}
+
+.addon-item p {
+	font-size: 14px;
+	color: #666;
+}
+
+/* Dark Mode */
+body {
+	background-color: #000000;
+	color: #ffffff; /* Default text color for dark mode */
+}

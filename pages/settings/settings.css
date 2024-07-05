@@ -1,0 +1,290 @@
+body,
+html {
+	overflow: auto;
+}
+
+@keyframes fadeInDown {
+	0% {
+		opacity: 0;
+		transform: translateY(-20px);
+	}
+
+	100% {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+@keyframes fadeIn {
+	0% {
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 1;
+	}
+}
+
+.settings-info-subheading {
+	opacity: 0.666;
+	margin-top: -0.1em;
+	margin-bottom: 1em;
+}
+
+.yellow-background {
+	background-color: rgb(250, 188, 43);
+}
+
+.short-hero {
+	position: relative;
+	overflow: hidden;
+}
+
+.blue-gradient-background {
+	background: linear-gradient(
+		135deg,
+		rgba(176, 176, 176, 1) 40%,
+		/* Первый цвет, занимает 40% */ rgba(215, 215, 215, 1) 70%,
+		/* Второй цвет, начинается с 40% и занимает до 70% */ rgba(255, 255, 255, 1)
+			100% /* Третий цвет, начинается с 70% и занимает до 100% */
+	);
+	color: #000000; /* Белый цвет текста */
+	animation: fadeIn 3s ease-in-out;
+}
+
+.container {
+	max-width: 1000px;
+	margin: auto;
+	padding: 0 1em;
+	animation: fadeInDown 1s ease-in-out;
+}
+
+.settings-container {
+	max-width: 1000px;
+	margin: 2.25em auto;
+	padding: 0 1em;
+	animation: fadeInDown 1s ease-in-out;
+}
+.settings-container .setting-option + .setting-option {
+	margin: 0.5em 0;
+}
+
+.setting-section {
+	font-size: 0; /* avoid adding space between inline-block children */
+}
+.setting-section:not(:only-of-type) {
+	padding: 0.5rem 0;
+}
+.setting-section select {
+	min-width: 225px;
+}
+.setting-section input[type='checkbox'] {
+	vertical-align: middle;
+	border-radius: 5px;
+}
+.setting-section input[type='checkbox'] + label {
+	vertical-align: middle;
+	border-radius: 5px;
+}
+.setting-section input + label {
+	padding-left: 0.33em;
+	border-radius: 5px;
+}
+.setting-section label + input,
+.setting-section label + textarea,
+.setting-section label + select {
+	margin-left: 0.66em;
+	border-radius: 5px;
+}
+.setting-secondary-label {
+	padding-left: 1.18em;
+	padding-top: 0.2em;
+}
+.banner {
+	padding: 1em;
+	position: sticky;
+	bottom: -1px;
+	left: 0;
+	width: 100%;
+	z-index: 9;
+	box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.2);
+}
+
+#key-map-list {
+	column-count: 2;
+	column-gap: 2.5%;
+}
+
+#key-map-list li {
+	list-style-type: none;
+	padding: 0.4em 0;
+}
+#key-map-list li label {
+	padding: 0.2em 0;
+	width: 43%;
+	display: inline-block;
+}
+#key-map-list li input {
+	width: 57%;
+	padding: 0.2em;
+	margin-left: 0;
+	border-radius: 5px;
+}
+
+@media all and (max-width: 800px) {
+	#key-map-list {
+		column-count: 1;
+	}
+
+	#key-map-list li label {
+		max-width: 200px;
+	}
+}
+
+@media all and (max-width: 400px) {
+	#key-map-list label,
+	#key-map-list input {
+		display: block;
+		width: 100% !important;
+		border-radius: 5px;
+	}
+}
+
+#content-blocking-statistics i {
+	font-size: 1.1em;
+	vertical-align: text-bottom;
+	margin-right: 0.15em;
+}
+
+#tracking-level-container .setting-option.selected:not(:first-child) {
+	border: 3px solid #ccc;
+	border-radius: 10px;
+	padding: 1em 1em;
+	margin-left: -0.5em;
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+#content-blocking-information {
+	margin: 0.75em 0.5em 0 1.58em;
+}
+
+#content-blocking-information textarea {
+	vertical-align: text-bottom;
+	resize: vertical;
+}
+
+#customize-filters-link {
+	display: block;
+	margin-top: 0.66em;
+	opacity: 0.8;
+}
+
+#proxy-settings-container input {
+	width: 100%;
+	max-width: 34em;
+	border-radius: 5px;
+}
+
+#restart-required-banner {
+	color: black;
+}
+
+#custom-bangs {
+	list-style: none;
+}
+
+#custom-bangs input {
+	margin-right: 0.5em;
+	width: 28%;
+	max-width: 225px;
+	border-radius: 5px;
+}
+
+#add-custom-bang {
+	padding: 0.1em 0.25em;
+}
+
+#add-custom-bang:hover {
+	cursor: pointer;
+}
+.custom-bang-delete-button {
+	font-size: 1.5em !important;
+	vertical-align: middle;
+	margin-bottom: 0.2em;
+}
+
+body {
+	background-color: #ffffff;
+	background-image: url('../../icons/backwhitesett.svg');
+	background-size: cover;
+	background-position: center center;
+	background-repeat: no-repeat;
+
+	scrollbar-width: thin; /* для Firefox */
+	scrollbar-color: rgba(183, 183, 183, 1) rgba(255, 255, 255, 0.7); /* цвет ползунка и фона */
+
+	/* WebKit (Safari, Chrome) */
+	&::-webkit-scrollbar {
+		width: 15px; /* ширина скроллбара */
+	}
+
+	&::-webkit-scrollbar-thumb {
+		background-color: rgba(255, 255, 255, 0.7); /* цвет ползунка */
+		border-radius: 50px; /* скругление углов ползунка */
+	}
+
+	&::-webkit-scrollbar-track {
+		background-color: rgba(202, 202, 202, 0.7); /* цвет фона скроллбара */
+		border-radius: 5px; /* скругление углов фона скроллбара */
+	}
+}
+
+.blue-gradient-background.dark-mode {
+	background: linear-gradient(
+		135deg,
+		rgba(0, 0, 0, 1) 40%,
+		/* Первый цвет, занимает 40% */ rgba(21, 21, 21, 1) 70%,
+		/* Второй цвет, начинается с 40% и занимает до 70% */ rgba(44, 44, 44, 1)
+			100% /* Третий цвет, начинается с 70% и занимает до 100% */
+	);
+	color: #fff; /* Белый цвет текста */
+}
+
+.dark-mode .blue-gradient-background {
+	background: linear-gradient(
+		135deg,
+		rgba(0, 0, 0, 1) 40%,
+		/* Первый цвет, занимает 40% */ rgba(21, 21, 21, 1) 70%,
+		/* Второй цвет, начинается с 40% и занимает до 70% */ rgba(44, 44, 44, 1)
+			100% /* Третий цвет, начинается с 70% и занимает до 100% */
+	);
+	color: #fff; /* Белый цвет текста */
+}
+
+body.dark-mode {
+	background-color: #000000;
+	background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+		url('../../icons/back.svg');
+	background-size: cover;
+	background-position: center center;
+	background-repeat: no-repeat;
+
+	scrollbar-width: thin; /* для Firefox */
+	scrollbar-color: rgba(47, 47, 47, 0.7) rgba(0, 0, 0, 0.7); /* цвет ползунка и фона */
+
+	/* WebKit (Safari, Chrome) */
+	&::-webkit-scrollbar {
+		width: 15px; /* ширина скроллбара */
+	}
+
+	&::-webkit-scrollbar-thumb {
+		background-color: rgba(50, 50, 50, 0.7); /* цвет ползунка */
+		border-radius: 50px; /* скругление углов ползунка */
+	}
+
+	&::-webkit-scrollbar-track {
+		background-color: rgba(0, 0, 0, 0.7); /* цвет фона скроллбара */
+		border-radius: 5px; /* скругление углов фона скроллбара */
+	}
+}

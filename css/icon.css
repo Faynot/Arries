@@ -1,0 +1,14 @@
+/* Скрыть логотип для темной темы по умолчанию */
+.dark-mode-only {
+	display: none;
+}
+
+/* Скрыть логотип для светлой темы при включенной темной теме */
+body.dark-mode .logo {
+	display: none;
+}
+
+/* Показать логотип для темной темы при включенной темной теме */
+body.dark-mode .dark-mode-only {
+	display: inline;
+}

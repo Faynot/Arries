@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Min Browser with Extensions</title>
+</head>
+<body>
+    <h1>Min Browser with Extensions</h1>
+    <button id="install-extension">Install Extension</button>
+    <script>
+        document.getElementById('install-extension').addEventListener('click', async () => {
+            const extensionPath = prompt('Enter the path to the extension:');
+            if (extensionPath) {
+                const result = await window.electronAPI.installExtension(extensionPath);
+                if (result.success) {
+                    alert('Extension installed successfully!');
+                } else {
+                    alert('Failed to install extension: ' + result.error);
+                }
+            }
+        });
+    </script>
+</body>
+</html>

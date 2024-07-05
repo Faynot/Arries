@@ -1,0 +1,142 @@
+@font-face {
+	font-family: 'src';
+	src: url('../css/ttf/src.ttf');
+	font-weight: normal;
+	font-style: normal;
+	background-position: center;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-size: 16px;
+	font-family: '.SFNSText-Regular', 'BlinkMacSystemFont', 'Helvetica Neue',
+		'src', 'Arial', 'sans-serif';
+}
+
+/* TODO figure out why the default focus color in Electron is orange */
+*:focus {
+	outline-color: rgb(0, 117, 255);
+}
+.dark-mode *:focus {
+	outline-color: transparent;
+}
+body.mac * {
+	letter-spacing: 0.4px;
+}
+[hidden] {
+	display: none !important;
+}
+
+/* buttons are styled like normal text by default */
+button {
+	-webkit-appearance: none;
+	background: none;
+	border: none;
+	color: inherit;
+	outline: none;
+}
+body,
+html {
+	background-color: #fff;
+	color: #000;
+	height: 100%;
+	overflow: hidden;
+	-webkit-user-select: none;
+	background-color: rgb(255, 255, 255);
+	background-image: url('../icons/backwhite.svg');
+	color: #000000;
+	background-size: cover;
+	background-position: center center;
+	background-repeat: no-repeat;
+}
+
+body.dark-mode {
+	background-color: rgb(0, 0, 0);
+	background-image: url('../icons/back.svg');
+	color: lightgrey;
+	background-size: cover;
+	background-position: center center;
+	background-repeat: no-repeat;
+}
+
+h1,
+h2,
+h3 {
+	font-size: 5em;
+	font-weight: 300;
+	opacity: 0.8;
+	margin: 0.5em 0;
+	color: inherit;
+	text-align: center;
+	font-family: 'src';
+}
+h2 {
+	text-align: left;
+	font-size: 2.75em;
+}
+h3 {
+	text-align: left;
+	font-size: 2em;
+}
+h1 + h2 {
+	margin-top: -1em;
+}
+.centered {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translateX(-50%) translateY(-50%);
+}
+.spacer {
+	height: 1em;
+}
+
+.light-fade {
+	opacity: 0.666;
+}
+
+a {
+	color: royalblue;
+	text-decoration: none;
+	font-family: 'src';
+}
+
+p {
+	font-family: 'src';
+}
+
+.dark-mode a {
+	color: #336ca5;
+}
+
+.dark-mode input,
+.dark-mode textarea {
+	background-color: rgb(29, 29, 29);
+	color: white;
+	border-color: transparent;
+}
+
+/* styled scrollbars */
+
+.has-thin-scrollbar::-webkit-scrollbar {
+	height: 0.25em;
+}
+.has-thin-scrollbar::-webkit-scrollbar-track {
+	background-color: rgba(0, 0, 0, 0.05);
+}
+.has-thin-scrollbar::-webkit-scrollbar-thumb {
+	background-color: rgba(0, 0, 0, 0.175);
+	border-radius: 0.25em;
+}
+.dark-theme .has-thin-scrollbar::-webkit-scrollbar-track {
+	background-color: rgba(0, 0, 0, 0.25);
+}
+.dark-theme .has-thin-scrollbar::-webkit-scrollbar-thumb {
+	background-color: rgba(255, 255, 255, 0.6);
+}
+
+.dark-theme .theme-background-color {
+	background-color: #000000;
+}
